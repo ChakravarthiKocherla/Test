@@ -16,6 +16,19 @@ function testAdd() {
 
     console.assert(add("//;\n1;2") === 3, "Test failed: '//;\\n1;2' should return 3");
 
+    try {
+        add("1,-2,3");
+    } catch (e) {
+        console.assert(e.message === "negative numbers not allowed: -2", "Test failed: should throw error with -2");
+    }
+    
+    try {
+        add("1,-2,-3");
+    } catch (e) {
+        console.assert(e.message === "negative numbers not allowed: -2, -3", "Test failed: should throw error with -2, -3");
+    }
+    
+
     console.log("All tests passed!");
     
 }
