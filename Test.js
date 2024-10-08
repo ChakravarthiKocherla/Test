@@ -14,6 +14,8 @@ function testAdd() {
 
     console.assert(add("1\n2,3") === 6, "Test failed: '1\\n2,3' should return 6");
 
+    console.assert(add("//;\n1;2") === 3, "Test failed: '//;\\n1;2' should return 3");
+
     console.log("All tests passed!");
     
 }
