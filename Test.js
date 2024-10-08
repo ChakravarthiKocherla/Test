@@ -6,6 +6,8 @@ function testAdd() {
 
     console.assert(add("1") === 1, "Test failed: '1' should return 1");
 
+    console.assert(add("1,5") === 6, "Test failed: '1,5' should return 6");
+
     console.log("All tests passed!");
     
 }
